@@ -12,14 +12,15 @@ public class Movement : MonoBehaviour
     float   vertical,
             horizontal;
 
+    //référence vers le Rigidbody
+    private Rigidbody bodyRef;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
-
-        //rotation à droite ?
-        //transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        //Merci la doc de MovePosition
+        bodyRef = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -54,9 +55,6 @@ public class Movement : MonoBehaviour
     {
 
         dir = new Vector3(horizontal, 0, vertical);
-
-        //Merci la doc de MovePosition
-        Rigidbody bodyRef = GetComponent<Rigidbody>();
 
         //Move Position méthode pour le kinematic rigdibdy
         //bodyRef.MovePosition(transform.position + speed * Time.fixedDeltaTime * dir);
