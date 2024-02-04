@@ -17,6 +17,8 @@ public class UITest : MonoBehaviour
         //Trouver la référence d'un GO via son nom
         GameObject TextMeshProGameObjectRef = GameObject.Find("Value");
 
+        GameObject.FindGameObjectWithTag("Finish");
+
         r = TextMeshProGameObjectRef.GetComponent<TextMeshProUGUI>();
 
         i = 0;
@@ -25,6 +27,6 @@ public class UITest : MonoBehaviour
     private void Update()
     {
         r.text = i.ToString();
-        i++;
+        //i++;
     }
 }

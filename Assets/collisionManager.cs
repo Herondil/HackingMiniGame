@@ -8,9 +8,7 @@ public class collisionManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(gameObject.name);
-
-        
+    
     }
 
     private void OnCollisionEnter(Collision collision)
